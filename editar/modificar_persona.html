@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Persona</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-sm   navbar-dark bg-dark border border-white">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item d-flex justify-content-center align-items-center">
+                <b><a href="/">Taller John & Doe</a></b>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../vehiculos.html">Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../personas.html">Personas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../mantenimientos.html">Mantenimientos</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="text-center text-white">Modificar Persona</h1>
+        <form class="row">
+            <div class="col-8 row">
+                <div class="col-4">
+                    <label class="text-white" for="cedula">Tipo:</label>
+                    <select disabled name="tipo" id="tipo" class="form-control">
+                        <option value="V">V</option>
+                        <option value="E">E</option>
+                        <option value="J">J</option>
+                        <option value="G">G</option>
+                    </select>
+                </div>
+                <div class="col-8">
+                    <label class="text-white" for="cedula">Identificación:</label>
+                    <input disabled id="cedula" name="cedula" class="form-control" type="text" maxlength="9" pattern="[0-9]+" placeholder="Ej: 29714067">
+                </div>
+            </div>
+            <div class="col-4">
+                <label class="text-white" for="genero">Género:</label>
+                <select name="genero" id="genero" class="form-control">
+                    <option value="H">Hombre</option>
+                    <option value="M">Mujer</option>
+                </select>
+            </div>  
+            
+            <div class="col-6">
+                <label class="text-white" for="nombre">Nombres: </label>
+                <input id="nombre" name="nombre" class="form-control" type="text" maxlength="50" required pattern="[a-zA-ZñÑáéíóúAEIOU ]+" placeholder="Ej: Juan Andrés">
+            </div>
+            <div class="col-6">
+                <label class="text-white" for="apellido">Apellidos: </label>
+                <input id="apellido" name="apellido" class="form-control" type="text" maxlength="50" required pattern="[a-zA-ZñÑáéíóúAEIOU ]+" placeholder="Ej: González Martínez">
+            </div>
+
+            <div class="col-12 d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-success">Enviar Formulario</button>
+            </div>
+        </form>
+    </main>
+
+    <script type="module" src="js/personas_modificacion.js"></script>
+</body>
+</html>

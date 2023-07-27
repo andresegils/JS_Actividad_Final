@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller John & Doe</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-sm   navbar-dark bg-dark border border-white">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item d-flex justify-content-center align-items-center">
+                <b><a href="/">Taller John & Doe</a></b>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vehiculos.html">Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="personas.html">Personas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mantenimientos.html">Mantenimientos</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center text-white">Personas</h1>
+        <a href="/crear/crear_persona.html" class="btn btn-primary float-right">+ Persona</a>
+        <table class="table table-dark table-hover">
+          <thead>
+            <th>Cédula</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Género</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </thead>
+          <tbody id="body">
+
+          </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="js/personas_consulta.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Mantenimiento</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-sm   navbar-dark bg-dark border border-white">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item d-flex justify-content-center align-items-center">
+                <b><a href="/">Taller John & Doe</a></b>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../vehiculos.html">Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../personas.html">Personas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../mantenimientos.html">Mantenimientos</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="text-center text-white">Modificar Mantenimiento</h1>
+        <form class="row">
+            <div class="col-6">
+                <label class="text-white" for="placa">Placa:</label>
+                <input id="placa" name="placa" class="form-control" type="text" minlength="7" maxlength="7" placeholder="Ej: XYZ12B">
+            </div>
+            <div class="col-6">
+                <label class="text-white" for="tipo">Tipo de Mantenimiento:</label>
+                <select name="tipo" id="tipo" class="form-control">
+                    <option value="P">Preventivo</option>
+                    <option value="C">Correctivo</option>
+                </select>
+            </div>  
+            
+            <div class="col-6">
+                <label class="text-white" for="fecha">Fecha:</label>
+                <input name="fecha" id="fecha" type="datetime-local" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-white" for="estado">Estado:</label>
+                <select name="estado" id="estado" class="form-control">
+                    <option value="P">Pendiente</option>
+                    <option value="F">Finalizado</option>
+                    <option value="C">Cancelado</option>
+                </select>              
+            </div>
+
+            <div class="col-12">
+              <label class="text-white" for="resultados">Resultados:</label>
+                <textarea name="resultados" id="resultados" cols="30" rows="10" class="form-control"></textarea>            
+            </div>
+
+            <div class="col-12 d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-success">Enviar Formulario</button>
+            </div>
+        </form>
+    </main>
+
+    <script type="module" src="js/mantenimiento_modificacion.js"></script>
+</body>
+</html>
